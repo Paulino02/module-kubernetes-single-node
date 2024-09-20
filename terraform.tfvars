@@ -1,0 +1,6 @@
+ssh_user     = "admmaster"
+ssh_password = "M@st3r@1708!"
+master_ip    = "192.168.10.13"
+control_plane_ip = "192.168.10.13"
+token = "q0q649.hf24t2z1ar4ely8n"
+ca_cert_hash = "sha256:cbc308cec642ec53319f1e53dedf08b03ecd321c339684818e4e10d457c07698"
