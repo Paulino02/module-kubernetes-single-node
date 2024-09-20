@@ -2,7 +2,8 @@
 
 # Update package list and install general dependencies
 echo "Updating package list and installing general dependencies..."
-sudo apt-get update
+sudo apt-get update -y
+sudo apt-get upgrade -y
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg socat
 
 # Install containerd
@@ -99,9 +100,9 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 kubectl taint nodes --all node-role.kubernetes.io/control-plane-
 kubectl taint nodes --all node-role.kubernetes.io/control-plane:NoSchedule-
 
-# Install Flannel network plugin
-echo "Installing Flannel network plugin..."
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+# Install calico network plugin
+echo "Installing calico network plugin..."
+kubectl apply -f https://docs.projectcalico.org/v3.25/manifests/calico.yaml
 
 # Install metrics-server
 echo "Installing metrics-server..."
